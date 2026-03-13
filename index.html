@@ -87,6 +87,10 @@
             opacity: 0.3;
         }
         
+        .hero-icon-col {
+            display: block;
+        }
+        
         .btn-custom {
             background-color: white;
             color: var(--primary-color);
@@ -305,9 +309,18 @@
         
         /* Responsive */
         @media (max-width: 991px) {
+            .hero-icon-col {
+                display: none !important;
+            }
+            
             .hero {
                 min-height: auto;
-                padding: 120px 0 60px;
+                padding: 100px 0 50px;
+            }
+            
+            .hero-content {
+                text-align: center;
+                max-width: 100%;
             }
             
             .hero-content h1 {
@@ -317,6 +330,18 @@
             .hero-content p {
                 font-size: 1.1rem;
                 margin-bottom: 1.5rem;
+            }
+            
+            .hero-content .d-flex {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem !important;
+            }
+            
+            .hero-content .btn {
+                width: 100%;
+                max-width: 280px;
+                padding: 12px 24px;
             }
             
             .section {
@@ -339,7 +364,17 @@
             }
             
             .hero {
-                padding: 100px 0 50px;
+                padding: 90px 0 40px;
+                min-height: auto;
+            }
+            
+            .hero .row {
+                justify-content: center;
+            }
+            
+            .hero .col-lg-6:first-child {
+                flex: 0 0 100%;
+                max-width: 100%;
             }
             
             .hero-content h1 {
@@ -348,15 +383,18 @@
             
             .hero-content p {
                 font-size: 1rem;
+                margin-bottom: 1.25rem;
             }
             
             .hero-content .d-flex {
                 flex-direction: column;
+                align-items: center;
                 gap: 0.75rem !important;
             }
             
             .hero-content .btn {
                 width: 100%;
+                max-width: 280px;
                 padding: 12px 24px;
                 min-height: 44px;
             }
@@ -439,8 +477,20 @@
                 padding-right: 1rem;
             }
             
+            .hero {
+                padding: 85px 0 35px;
+            }
+            
             .hero-content h1 {
                 font-size: 1.75rem;
+            }
+            
+            .hero-content p {
+                font-size: 0.95rem;
+            }
+            
+            .hero-content .btn {
+                max-width: 100%;
             }
             
             .section-title {
@@ -498,7 +548,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center d-none d-lg-block">
+                <div class="col-lg-6 text-center hero-icon-col">
                     <div class="hero-decorative-icon">
                         <i class="bi bi-code-slash"></i>
                     </div>
