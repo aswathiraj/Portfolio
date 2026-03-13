@@ -32,6 +32,7 @@
             font-family: 'Poppins', sans-serif;
             color: var(--dark-color);
             line-height: 1.6;
+            overflow-x: hidden;
         }
         
         /* Navigation */
@@ -79,6 +80,11 @@
             font-size: 1.25rem;
             margin-bottom: 2rem;
             opacity: 0.9;
+        }
+        
+        .hero-decorative-icon {
+            font-size: 15rem;
+            opacity: 0.3;
         }
         
         .btn-custom {
@@ -298,17 +304,152 @@
         }
         
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 991px) {
+            .hero {
+                min-height: auto;
+                padding: 120px 0 60px;
+            }
+            
             .hero-content h1 {
-                font-size: 2.5rem;
+                font-size: 2.25rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .section {
+                padding: 50px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .section-title::after {
+                margin: 0.75rem auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.75rem 0;
+            }
+            
+            .hero {
+                padding: 100px 0 50px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
             }
             
             .hero-content p {
                 font-size: 1rem;
             }
             
+            .hero-content .d-flex {
+                flex-direction: column;
+                gap: 0.75rem !important;
+            }
+            
+            .hero-content .btn {
+                width: 100%;
+                padding: 12px 24px;
+                min-height: 44px;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
             .section-title {
-                font-size: 2rem;
+                font-size: 1.75rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .about-content {
+                font-size: 1rem;
+            }
+            
+            .about-content p {
+                margin-bottom: 1rem;
+            }
+            
+            .about-content h4 {
+                font-size: 1.1rem;
+                margin-top: 1.5rem;
+            }
+            
+            .about-content ul li {
+                margin-bottom: 0.75rem !important;
+                font-size: 0.95rem;
+            }
+            
+            .contact-card {
+                padding: 1.5rem;
+            }
+            
+            .contact-item {
+                margin-bottom: 1.25rem;
+            }
+            
+            .contact-item h5 {
+                font-size: 1rem;
+            }
+            
+            .contact-item p {
+                font-size: 0.9rem;
+            }
+            
+            .social-links {
+                margin-top: 1.5rem;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .social-link {
+                width: 44px;
+                height: 44px;
+                font-size: 1.1rem;
+            }
+            
+            .project-card-body {
+                padding: 0.875rem 1rem;
+            }
+            
+            .project-card h4 {
+                font-size: 1rem;
+            }
+            
+            .project-card p {
+                font-size: 0.75rem;
+            }
+            
+            .skill-card {
+                padding: 1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 1.75rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .footer {
+                padding: 1.5rem 0.5rem;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -357,8 +498,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <div style="font-size: 15rem; opacity: 0.3;">
+                <div class="col-lg-6 text-center d-none d-lg-block">
+                    <div class="hero-decorative-icon">
                         <i class="bi bi-code-slash"></i>
                     </div>
                 </div>
